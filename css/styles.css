@@ -5,10 +5,13 @@ body {
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
     url(https://img.goodfon.com/original/1921x1081/a/cd/abstraktsiia-linii-background-geometriia.jpg);
   color: white;
+
+  cursor: url('/images/cursor.png') 4 4, auto;
 }
 
-a {
+a, button {
   color: inherit;
+  cursor: url('/images/pointer.png') 4 4, pointer;
 }
 
 .inner {
@@ -136,6 +139,10 @@ a {
   width: 40%;
 
   animation: fade 1s forwards;
+
+  border-style: dashed;
+  border-width: 5px;
+  border-color: rgb(127, 27, 147);
 }
 
 #resume a {
@@ -156,6 +163,10 @@ a {
   width: 50%;
 
 	animation: fade 1s forwards;
+
+  border-style: dashed;
+  border-width: 5px;
+  border-color: rgb(27, 147, 147);
 }
 
 img{
@@ -177,6 +188,10 @@ img{
   text-align: center;
 
 	animation: fade 1s forwards;
+
+  border-style: dashed;
+  border-width: 5px;
+  border-color: rgb(127, 27, 147);
 }
 
 #about p {
@@ -206,6 +221,10 @@ img{
   width: 40%;
 
 	animation: fade 1s forwards;
+
+  border-style: dashed;
+  border-width: 5px;
+  border-color: rgb(27, 147, 147);
 }
 
 #contact li {
