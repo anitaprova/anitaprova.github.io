@@ -5,10 +5,10 @@ document.addEventListener("DOMContentLoaded", function () {
   resumeLink.addEventListener("click", function (event) {
     header.style.display = "none";
     resumeSection.style.display = "inherit";
-		resumeSection.style.visibility = "visible";
+    resumeSection.style.visibility = "visible";
   });
 
-	const projectLink = document.getElementById("project-link");
+  const projectLink = document.getElementById("project-link");
   const projectSection = document.getElementById("project");
   projectLink.addEventListener("click", function (event) {
     header.style.display = "none";
@@ -16,7 +16,7 @@ document.addEventListener("DOMContentLoaded", function () {
     projectSection.style.visibility = "visible";
   });
 
-	const aboutLink = document.getElementById("about-link");
+  const aboutLink = document.getElementById("about-link");
   const aboutSection = document.getElementById("about");
   aboutLink.addEventListener("click", function (event) {
     header.style.display = "none";
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
     aboutSection.style.visibility = "visible";
   });
 
-	const contactLink = document.getElementById("contact-link");
+  const contactLink = document.getElementById("contact-link");
   const contactSection = document.getElementById("contact");
   contactLink.addEventListener("click", function (event) {
     header.style.display = "none";
@@ -53,6 +53,27 @@ document.addEventListener("DOMContentLoaded", function () {
   const projectsData = {
     article_id: "project",
     projects: [
+      {
+        title: "Diava",
+        description:
+          "Diava aims to be the go-to platform for book lovers by integrating gamified features and social engagement tools. We want to provide a motivating way for users to track their reading progress while fostering a vibrant community. By making reading more interactive, we aim to encourage people to read consistently and engage deeply with their books.",
+        technologies: ["React.js", "Supabase", "Hugging Face", "Tailwind CSS"],
+        links: {
+          github: "https://github.com/anitaprova/Diava",
+        },
+        image: "images/homepage.png",
+      },
+
+      {
+        title: "Compound Compass",
+        description:
+          "Our web app takes a SMILES string, extracts the scaffold, and performs similarity analysis to find similar compounds. In addition, it can take voice commands and return the corresponding SMILES string.",
+        technologies: ["Python", "RDKit", "HTML", "CSS", "Flask"],
+        links: {
+          github: "https://github.com/anitaprova/jasy-gals",
+        },
+        image: "images/compound_compass.jpg",
+      },
       {
         title: "Art Restoration",
         description:
@@ -124,9 +145,9 @@ document.addEventListener("DOMContentLoaded", function () {
   };
 
   const projectsContainer = document.getElementById("projects-container");
-  projectsData.projects.forEach(project => {
+  projectsData.projects.forEach((project) => {
     const projectDiv = document.createElement("div");
-    
+
     const title = document.createElement("h3");
     title.textContent = project.title;
     projectDiv.appendChild(title);
@@ -136,7 +157,8 @@ document.addEventListener("DOMContentLoaded", function () {
     projectDiv.appendChild(description);
 
     const techList = document.createElement("p");
-    techList.textContent = "Technologies Used: " + project.technologies.join(", ");
+    techList.textContent =
+      "Technologies Used: " + project.technologies.join(", ");
     projectDiv.appendChild(techList);
 
     const linkList = document.createElement("p");
@@ -175,7 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
       projectDiv.appendChild(image);
     }
 
-    if(project.gif){
+    if (project.gif) {
       const gif = document.createElement("img");
       gif.src = project.gif;
       projectDiv.appendChild(gif);
@@ -185,4 +207,143 @@ document.addEventListener("DOMContentLoaded", function () {
     const breakLine = document.createElement("br");
     linkList.appendChild(breakLine);
   });
+
+  const resumeData = {
+    education: [
+      {
+        degree: "Bachelor of Arts in Computer Science",
+        institution: "Hunter College",
+        graduationDate: "August 2022 - Dec 2025",
+      },
+    ],
+    skills: [
+      "C++",
+      "JavaScript",
+      "Python",
+      "HTML",
+      "CSS",
+      "React",
+      "Java",
+      "MySQL",
+    ],
+    experiences: [
+      {
+        title: "Software Engineer Intern",
+        company: "PwC",
+        location: "New York, NY",
+        dates: "June 2025 - Aug 2025",
+        responsibilities: [
+          "Developed an AI agent using Python to analyze code and generate visual representations automatically",
+          "Containerized components with Docker to support scalable deployment and consistent development environments",
+          "Utilized Langflow to integrate large language models into the development process and create a proof of concept",
+        ],
+      },
+      {
+        title: "Web Master",
+        company: "Women in Computer Science Club (WiCS)",
+        location: "New York, NY",
+        dates: "Feb 2025 - Present",
+        responsibilities: [
+          "Rebuilt the WiCS website using React, TypeScript, Next.js, and shadcn for improved performance and user experience",
+          "Designed and implemented an admin dashboard using Firebase to enable streamlined content management",
+        ],
+      },
+      {
+        title: "Fellow, Software Development/Data Science",
+        company: "CUNY Tech Prep",
+        location: "New York, NY",
+        dates: "Jul 2024 - May 2025",
+        responsibilities: [
+          "Selected for a competitive data science fellowship with students from across the 11 CUNY senior colleges",
+          "Mastered Python 3, Jupyter Notebooks, Pandas, Numpy, Scikit-learn, and SQL, and learned best practices in EDA, feature engineering, data processing, statistical modeling, data visualization, machine learning, data science process, and big data",
+        ],
+      },
+      {
+        title: "Products and Technology Intern",
+        company: "PwC",
+        location: "New York, NY",
+        dates: "June 2024 - July 2024",
+        responsibilities: [
+          "Presented user experience improvements and marketing strategies for a pro bono case involving a nonprofit in education",
+          "Leveraged Microsoft Power BI and Excel to visualize, clean, and analyze data for PowerPoint presentations in pro bono case",
+          "Worked on a case study independently, analyzing key findings and presenting actionable insights",
+        ],
+      },
+      {
+        title: "Customer Service",
+        company: "DigitalJetstream",
+        location: "Remote",
+        dates: "August 2022 - Present",
+        responsibilities: [
+          "Managed and executed targeted email campaigns to engage a customer list of 100+ individuals, resulting in a 5% increase in open rates",
+          "Provided technical support and assistance to customers by enhancing website functionality through Joomla!",
+          "Supervised and mentored a team of interns by overseeing their activities and providing constructive feedback",
+        ],
+      },
+      {
+        title: "Assistant Web Developer",
+        company: "DigitalJetstream",
+        location: "Remote",
+        dates: "July 2022 - August 2022",
+        responsibilities: [
+          "Ran a website through Joomla! by designing the site, adding content, and handling updates",
+          "Uploaded a series of engaging, well-researched articles",
+          "Conducted comprehensive research across diverse subjects, including artificial intelligence advancements",
+        ],
+      },
+      {
+        title: "Systems Intern",
+        company: "Almod Diamonds",
+        location: "New York, NY",
+        dates: "July 2021 - August 2021",
+        responsibilities: [
+          "Created and tested 50+ PC golden images with Sysprep and Acronis True Image for workstation rollout in multiple locations",
+          "Imported and cleaned data using Excel",
+          "Created comprehensive documentation for all projects",
+        ],
+      },
+    ],
+  };
+
+  const resumeContainer = document.getElementById("resume-container");
+
+  // === Education ===
+  const schoolTitle = document.createElement("h3");
+  schoolTitle.textContent = "Education";
+  resumeContainer.appendChild(schoolTitle);
+
+  const schoolInfo = document.createElement("p");
+  schoolInfo.innerHTML = `
+  <b>${resumeData.education[0].institution}</b> —
+  <i>${resumeData.education[0].degree}</i> <br />
+  <i>${resumeData.education[0].graduationDate}</i><br />
+`;
+  resumeContainer.appendChild(schoolInfo);
+
+  // === Technical Skills ===
+  const skillsTitle = document.createElement("h3");
+  skillsTitle.textContent = "Technical Skills";
+  resumeContainer.appendChild(skillsTitle);
+
+  const skillsInfo = document.createElement("p");
+  skillsInfo.innerHTML = resumeData.skills
+    .map((skill) => `➸ ${skill}`)
+    .join("<br />");
+  resumeContainer.appendChild(skillsInfo);
+
+  // === Experience ===
+  const expTitleMain = document.createElement("h3");
+  expTitleMain.textContent = "Experience";
+  resumeContainer.appendChild(expTitleMain);
+
+  resumeData.experiences.forEach((exp) => {
+    const expP = document.createElement("p");
+    expP.innerHTML = `
+    <b>${exp.company}</b> — <i>${exp.title}</i> <br />
+    <i>${exp.dates}</i><br />
+    ${exp.responsibilities.map((r) => `➸ ${r}`).join("<br />")}
+  `;
+    resumeContainer.appendChild(expP);
+  });
+
 });
