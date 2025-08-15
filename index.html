@@ -8,12 +8,16 @@
     />
     <link rel="icon" type="image/x-icon" href="/images/icon.png" />
     <link rel="stylesheet" href="css/styles.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="/images/cursor.png" as="image" />
+    <link rel="preconnect" href="/images/pointer.png" as="image" />
+    <link rel="preconnect" href="/images/background.jpg" as="image" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=DotGothic16&family=MedievalSharp&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
+
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -26,6 +30,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
     <script src="js/scripts.js"></script>
   </head>
 
@@ -64,22 +70,281 @@
       <!-- Resume -->
       <div id="content">
         <article id="resume">
-          <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
-           <h2 class="major">Resume</h2>
-          
-          <p>
-            Link for PDF Version:
-            <a href="/images/Resume.pdf" target="_blank">Resume.pdf</a>
-          </p>
-          <div id="resume-container"></div>
-        </article> 
+          <div class="scroll-wrapper">
+            <div class="scroll-top"></div>
+            <div class="scroll-middle">
+              <div class="resume-content">
+                <div class="resume-heading">
+                  <a href="" class="cancel">X</a>
+                  <h2>Resume</h2>
+                </div>
+                <div id="resume-container"></div>
+              </div>
+              <div class="signature">
+                <a href="" class="cancel">X</a>
+                <p>Anita Prova</p>
+              </div>
+            </div>
+            <div class="scroll-bottom"></div>
+          </div>
+        </article>
 
-			<!-- Projects -->
-			<article id="project">
-				<a href="" class="cancel"><i class="fa fa-xmark"></i></a>
-				<h2 class="major">Work</h2>
-				<div id="projects-container"></div>
-			</article>
+        <!-- Projects -->
+        <article id="project">
+          <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
+          <h2 class="major">Projects</h2>
+          <div id="projects-flipbook" class="flipbook">
+            <!-- front cover -->
+            <div class="hard">
+              <p>
+                Anita's Spell Book <small>Flip if you dare</small>
+              </p>
+            </div>
+            <div class="hard"></div>
+
+            <div class="page">
+              <h2>Diava</h2>
+              <img
+                src="images/homepage.png"
+                alt="Diava"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <p>
+                Diava aims to be the go-to platform for book lovers by
+                integrating gamified features and social engagement tools. We
+                want to provide a motivating way for users to track their
+                reading progress while fostering a vibrant community. By making
+                reading more interactive, we aim to encourage people to read
+                consistently and engage deeply with their books.
+              </p>
+              <p>
+                <strong>Technologies:</strong> React.js, Supabase, Hugging Face,
+                Tailwind CSS
+              </p>
+              <p>
+                <strong>Links:</strong>
+                <a
+                  href="https://github.com/anitaprova/Diava"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </p>
+            </div>
+
+            <div>
+              <h2>Compound Compass</h2>
+              <img
+                src="images/compound_compass.jpg"
+                alt="Compound Compass"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <p>
+                Our web app takes a SMILES string, extracts the scaffold, and
+                performs similarity analysis to find similar compounds. In
+                addition, it can take voice commands and return the
+                corresponding SMILES string.
+              </p>
+              <p>
+                <strong>Technologies:</strong> Python, RDKit, HTML, CSS, Flask
+              </p>
+              <p>
+                <strong>Links:</strong>
+                <a
+                  href="https://github.com/anitaprova/jasy-gals"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </p>
+            </div>
+
+            <div>
+              <h2>Art Restoration</h2>
+              <img
+                src="images/art_restoration.png"
+                alt="Art Restoration"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <p>
+                We developed a machine learning model from scratch for image
+                restoration, utilizing UNET to deblur, denoise, and brighten
+                images, restoring them to their original quality.
+              </p>
+              <p>
+                <strong>Technologies:</strong> Python, Tensorflow, Streamlit,
+                NumPy, Pandas
+              </p>
+              <p>
+                <strong>Links:</strong>
+                <a
+                  href="https://github.com/anitaprova/CTP-Project"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+                |
+                <a
+                  href="https://artrestoration.streamlit.app/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Website</a
+                >
+              </p>
+            </div>
+
+            <div>
+              <h2>HawkHelper</h2>
+              <img
+                src="images/hawkhelper.gif"
+                alt="HawkHelper"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <p>
+                We created a chatbot made for and by Hunter students. It will
+                give students in-depth accurate information on mental health,
+                food assistance, housing initiatives, and more quickly,
+                efficiently, and accurately. By simply asking the chatbot any
+                question regarding resources, students can receive answers
+                almost instantaneously without the extra clicks and tabs.
+              </p>
+              <p>
+                <strong>Technologies:</strong> React.js, Express.js, Python,
+                Gemini API, HTML, CSS
+              </p>
+              <p>
+                <strong>Links:</strong>
+                <a
+                  href="https://github.com/zaraamerr/cuny-resource-chatbot"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+                |
+                <a
+                  href="https://devpost.com/software/hawkhelper"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Devpost</a
+                >
+              </p>
+            </div>
+
+            <div>
+              <h2>NYC Culture Map</h2>
+              <img
+                src="images/map.gif"
+                alt="NYC Culture Map"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <p>
+                This project was a collaborative effort with a team of four
+                members for the CUNY hackathon. Over the course of three days,
+                we employed technologies such as HTML, CSS, React, JS, LeafLet,
+                and Google OAuth. The web app aims to provide an immersive
+                exploration of New York City's diverse neighborhoods,
+                highlighting their cultural richness and heritage. I utilized
+                React and Leaflet to create an interactive map experience for
+                users.
+              </p>
+              <p>
+                <strong>Technologies:</strong> HTML, CSS, React, JS, LeafLet,
+                Google OAuth
+              </p>
+              <p>
+                <strong>Links:</strong>
+                <a
+                  href="https://devpost.com/software/nyc-explorer"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Devpost</a
+                >
+                |
+                <a
+                  href="https://github.com/Aaleia/UrbanTapestry"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </p>
+            </div>
+
+            <div>
+              <h2>Joystick Junction</h2>
+              <img
+                src="images/joystick junction.gif"
+                alt="Joystick Junction"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <p>
+                Over the course of 10 weeks, as part of my final project for the
+                Intermediate Web Development Course at Codepath, I designed and
+                developed a website using React where users can discuss their
+                favorite video games. The website includes features such as user
+                posts, where users can create, edit, and delete their posts, a
+                commenting system allowing users to comment on posts made by
+                others, and filtering options to sort posts by most popular and
+                by time.
+              </p>
+              <p><strong>Technologies:</strong> React</p>
+              <p>
+                <strong>Links:</strong>
+                <a
+                  href="https://github.com/anitaprova/codepath-finalproject"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </p>
+            </div>
+
+            <div>
+              <h2>Book Search</h2>
+              <p>
+                This project was a collaborative effort with a team of three
+                members over the course of one month. We employed technologies
+                such as SvelteKit, Google Firebase, Google Firestore, Vite,
+                HTML, CSS, and JavaScript. The application utilized Google Books
+                APIs to facilitate search functionalities. I led the
+                implementation of front-end components using SvelteKit and
+                styled the application with CSS. The project was showcased at
+                Codefest 2024 and was a part of a Google mentorship program,
+                where we received guidance from industry experts to improve our
+                technical skills and project management abilities.
+              </p>
+              <p>
+                <strong>Technologies:</strong> SvelteKit, Google Firebase,
+                Google Firestore, Vite, HTML, CSS, JavaScript
+              </p>
+              <p>
+                <strong>Links:</strong>
+                <a
+                  href="https://github.com/Justinw21/dabooks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >GitHub</a
+                >
+              </p>
+            </div>
+
+            <!-- back cover -->
+            <div class="hard">
+              Thanks for reading <small>© Anita Prova</small>
+            </div>
+          </div>
+        </article>
+
+        <script src="/js/scripts.js"></script>
+        <script src="jquery.js"></script>
+        <script src="turn.js"></script>
+        <script>
+          $(".flipbook").turn();
+        </script>
+        <!-- <article id="project">
+          <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
+          <h2 class="major">Work</h2>
+          <div id="projects-container"></div>
+        </article> -->
 
         <article id="about">
           <a href="" class="cancel"><i class="fa fa-xmark"></i></a>

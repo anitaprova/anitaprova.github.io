@@ -144,69 +144,69 @@ document.addEventListener("DOMContentLoaded", function () {
     ],
   };
 
-  const projectsContainer = document.getElementById("projects-container");
-  projectsData.projects.forEach((project) => {
-    const projectDiv = document.createElement("div");
+  // const projectsContainer = document.getElementById("projects-container");
+  // projectsData.projects.forEach((project) => {
+  //   const projectDiv = document.createElement("div");
 
-    const title = document.createElement("h3");
-    title.textContent = project.title;
-    projectDiv.appendChild(title);
+  //   const title = document.createElement("h3");
+  //   title.textContent = project.title;
+  //   projectDiv.appendChild(title);
 
-    const description = document.createElement("p");
-    description.textContent = project.description;
-    projectDiv.appendChild(description);
+  //   const description = document.createElement("p");
+  //   description.textContent = project.description;
+  //   projectDiv.appendChild(description);
 
-    const techList = document.createElement("p");
-    techList.textContent =
-      "Technologies Used: " + project.technologies.join(", ");
-    projectDiv.appendChild(techList);
+  //   const techList = document.createElement("p");
+  //   techList.textContent =
+  //     "Technologies Used: " + project.technologies.join(", ");
+  //   projectDiv.appendChild(techList);
 
-    const linkList = document.createElement("p");
-    if (project.links.github) {
-      const githubLink = document.createElement("a");
-      githubLink.href = project.links.github;
-      githubLink.textContent = "View the Github Here";
-      const breakLine = document.createElement("br");
-      linkList.appendChild(githubLink);
-      linkList.appendChild(breakLine);
-    }
+  //   const linkList = document.createElement("p");
+  //   if (project.links.github) {
+  //     const githubLink = document.createElement("a");
+  //     githubLink.href = project.links.github;
+  //     githubLink.textContent = "View the Github Here";
+  //     const breakLine = document.createElement("br");
+  //     linkList.appendChild(githubLink);
+  //     linkList.appendChild(breakLine);
+  //   }
 
-    if (project.links.website) {
-      const websiteLink = document.createElement("a");
-      websiteLink.href = project.links.website;
-      websiteLink.textContent = "View the Website Here";
-      const breakLine = document.createElement("br");
-      linkList.appendChild(websiteLink);
-      linkList.appendChild(breakLine);
-    }
+  //   if (project.links.website) {
+  //     const websiteLink = document.createElement("a");
+  //     websiteLink.href = project.links.website;
+  //     websiteLink.textContent = "View the Website Here";
+  //     const breakLine = document.createElement("br");
+  //     linkList.appendChild(websiteLink);
+  //     linkList.appendChild(breakLine);
+  //   }
 
-    if (project.links.devpost) {
-      const devpostLink = document.createElement("a");
-      devpostLink.href = project.links.devpost;
-      devpostLink.textContent = "View Devpost Here";
-      const breakLine = document.createElement("br");
-      linkList.appendChild(devpostLink);
-      linkList.appendChild(breakLine);
-    }
-    projectDiv.appendChild(linkList);
+  //   if (project.links.devpost) {
+  //     const devpostLink = document.createElement("a");
+  //     devpostLink.href = project.links.devpost;
+  //     devpostLink.textContent = "View Devpost Here";
+  //     const breakLine = document.createElement("br");
+  //     linkList.appendChild(devpostLink);
+  //     linkList.appendChild(breakLine);
+  //   }
+  //   projectDiv.appendChild(linkList);
 
-    if (project.image) {
-      const image = document.createElement("img");
-      image.src = project.image;
-      image.alt = "Image of " + project.title;
-      projectDiv.appendChild(image);
-    }
+  //   if (project.image) {
+  //     const image = document.createElement("img");
+  //     image.src = project.image;
+  //     image.alt = "Image of " + project.title;
+  //     projectDiv.appendChild(image);
+  //   }
 
-    if (project.gif) {
-      const gif = document.createElement("img");
-      gif.src = project.gif;
-      projectDiv.appendChild(gif);
-    }
+  //   if (project.gif) {
+  //     const gif = document.createElement("img");
+  //     gif.src = project.gif;
+  //     projectDiv.appendChild(gif);
+  //   }
 
-    projectsContainer.appendChild(projectDiv);
-    const breakLine = document.createElement("br");
-    linkList.appendChild(breakLine);
-  });
+  //   projectsContainer.appendChild(projectDiv);
+  //   const breakLine = document.createElement("br");
+  //   linkList.appendChild(breakLine);
+  // });
 
   const resumeData = {
     education: [
@@ -307,6 +307,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const resumeContainer = document.getElementById("resume-container");
 
+  const link = document.createElement("a");
+  link.href = "/images/Resume.pdf";
+  link.target = "_blank";
+  link.textContent = "Link to Resume.pdf";
+  resumeContainer.appendChild(link);
+
   // === Education ===
   const schoolTitle = document.createElement("h3");
   schoolTitle.textContent = "Education";
@@ -347,3 +353,6 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
 });
+
+
+

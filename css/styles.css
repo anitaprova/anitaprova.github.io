@@ -3,15 +3,17 @@ body {
   margin-top: 3%;
   margin-bottom: 3%;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url(https://img.goodfon.com/original/1921x1081/a/cd/abstraktsiia-linii-background-geometriia.jpg);
+    url("/images/forest.png") center center fixed;
+  background-repeat: no-repeat;
+  background-size: cover ;
   color: white;
-
-  cursor: url('/images/cursor.png') 4 4, auto;
+  cursor: url("/images/cursor.png") 4 4, auto;
 }
 
-a, button {
+a,
+button {
   color: inherit;
-  cursor: url('/images/pointer.png') 4 4, pointer;
+  cursor: url("/images/pointer.png") 4 4, pointer;
 }
 
 .inner {
@@ -22,6 +24,12 @@ a, button {
   border-top-style: solid;
   border-bottom-style: solid;
   border-color: white;
+  font-family: "DotGothic16", sans-serif;
+}
+
+nav {
+  font-family: "DotGothic16", sans-serif;
+  font-size: larger;
 }
 
 @keyframes pop {
@@ -117,7 +125,6 @@ a, button {
 
 @keyframes fade {
   from {
-     
     opacity: 0;
   }
   to {
@@ -128,25 +135,110 @@ a, button {
 #resume {
   display: none;
   visibility: hidden;
-
-  padding: 3%;
-  border-radius: 0.5%;
-  font-family: "Source Sans 3", sans-serif;
-  background-color: rgb(25, 4, 71);
-  margin: auto;
-  position: relative;
-  top: 50%;
-  width: 40%;
-
   animation: fade 1s forwards;
-
-  border-style: dashed;
-  border-width: 5px;
-  border-color: rgb(127, 27, 147);
 }
 
 #resume a {
-  color: white;
+  color: #47320f;
+}
+
+.scroll-wrapper {
+  position: relative;
+  width: 1200px;
+  margin: auto;
+}
+
+.scroll-middle {
+  background: url("/images/scroll_middle.png") repeat-y center;
+  background-size: contain;
+  padding-left: 18%;
+  padding-right: 18%;
+  padding-bottom: 3%;
+  padding-top: 1%;
+}
+
+.scroll-top {
+  background: url("/images/scroll_top.png") no-repeat center bottom;
+  background-size: contain;
+  height: 200px;
+}
+
+.scroll-bottom {
+  background: url("/images/scroll_top.png") no-repeat center top;
+  background-size: contain;
+  height: 200px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  margin: 0;
+}
+
+.resume-content {
+  position: relative;
+  color: #47320f;
+}
+
+.resume-heading {
+  align-items: center;
+  text-align: center;
+  font-family: "Ballet", cursive;
+  font-style: normal;
+
+  display: grid;
+  grid-template-rows: max-content;
+  grid-template-columns: 50px 1fr;
+  align-items: center;
+
+  padding-top: 3%;
+  padding-bottom: 3%;
+}
+
+.resume-heading h2 {
+  padding: 0px;
+  margin: 0px;
+  font-size: 70px;
+}
+
+.resume-heading a {
+  position: relative;
+  font-family: "WindSong", cursive;
+  font-size: 50px;
+  text-decoration: none;
+  color: inherit;
+}
+
+.resume-heading p:hover {
+  color: #b68f40;
+  text-shadow: 0px 0px 5px #ffefb5;
+}
+
+.signature {
+  display: grid;
+  grid-template-rows: min-content;
+  grid-template-columns: 150px 1fr;
+  align-items: end;
+
+  font-family: "Ballet", cursive;
+  font-size: 75px;
+  font-style: normal;
+  text-align: center;
+  color: #47320f;
+  padding-top: 10%;
+  border-bottom: 10px dashed black;
+}
+
+.signature p {
+  padding: 0px;
+  margin: 0px;
+}
+
+.signature .cancel {
+  position: relative;
+  text-align: left;
+  font-family: "WindSong", cursive;
+  font-weight: 500;
+  font-size: 100px;
+  text-decoration: none;
+  color: inherit;
 }
 
 #project {
@@ -156,20 +248,112 @@ a, button {
   padding: 3%;
   border-radius: 0.5%;
   font-family: "Source Sans 3", sans-serif;
-  background-color: rgb(25, 4, 71);
   margin: auto;
   position: relative;
   top: 50%;
-  width: 50%;
 
-	animation: fade 1s forwards;
-
-  border-style: dashed;
-  border-width: 5px;
-  border-color: rgb(27, 147, 147);
+  animation: fade 1s forwards;
 }
 
-img{
+.flipbook {
+  width: 1000px;
+  height: 600px;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.flipbook .hard {
+  background: url("/images/cover.png") !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  color: #fff !important;
+  font-weight: bold;
+  border: none;
+}
+
+.flipbook .hard p{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  font-family: "MedievalSharp", cursive;
+  font-size: larger;
+  gap: 5px;
+  padding: 5%;
+  border-radius: 5%;
+  background-color: #471077;
+}
+
+.flipbook .hard small {
+  font-style: italic;
+  font-weight: lighter;
+  opacity: 0.7;
+  font-size: 14px;
+}
+
+.hard.page.p1.even {
+  /* background: url("/images/cover.png"); */
+  /* background-size: cover; */
+  background-color: #fda335;
+  /* background-position: ; */
+}
+
+.flipbook .page {
+  background: url("/images/parchement.png");
+  background-size: contain;
+  background-position: center;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.11);
+  border-radius: 5px;
+  box-shadow: inset 0 0 15px #c8b77b;
+  box-shadow: inset 10px 0 15px -10px rgba(0, 0, 0, 0.3);
+}
+
+.flipbook .page h2 {
+  font-size: 50px;
+  margin: 0;
+  padding: 0;
+  font-family: "MedievalSharp", cursive;
+
+  animation: flicker 3s infinite alternate;
+  color: #4d0852;
+  text-shadow: 0 0 5px #fda335, 0 0 10px #e6ab2a, 0 0 20px #f9a825;
+}
+
+@keyframes flicker {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.85;
+  }
+}
+
+.flipbook .page p {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+
+.page img {
+  width: 70%;
+  object-fit: cover;
+}
+
+.flipbook .page small {
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+img {
   width: 100%;
 }
 
@@ -187,7 +371,7 @@ img{
   width: 40%;
   text-align: center;
 
-	animation: fade 1s forwards;
+  animation: fade 1s forwards;
 
   border-style: dashed;
   border-width: 5px;
