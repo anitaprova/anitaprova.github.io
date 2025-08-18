@@ -16,8 +16,10 @@
     <link rel="preconnect" href="/images/background.jpg" as="image" />
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=DotGothic16&family=MedievalSharp&family=WindSong:wght@400;500&display=swap" rel="stylesheet">
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=DotGothic16&family=MedievalSharp&family=WindSong:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
 
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
@@ -33,9 +35,11 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </head>
 
   <body>
+    <div id="particles-js"></div>
     <div id="wrapper">
       <header id="header">
         <div class="content">
@@ -96,9 +100,7 @@
           <div id="projects-flipbook" class="flipbook">
             <!-- front cover -->
             <div class="hard">
-              <p>
-                Anita's Spell Book <small>Flip if you dare</small>
-              </p>
+              <p>Anita's Spell Book <small>Flip if you dare</small></p>
             </div>
             <div class="hard"></div>
 
@@ -370,26 +372,111 @@
           <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
           <h2 class="major">Contact</h2>
           <p>Want to reach out? Here are my platforms below!</p>
-          <ul class="icons">
-            <li>
-              <a href="https://www.linkedin.com/in/anita-prova-950322245/"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://github.com/anitaprova"
-                ><i class="fab fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a href="mailto:ANITA.PROVA49@myhunter.cuny.edu"
-                ><i class="fas fa-envelope"></i
-              ></a>
-            </li>
-          </ul>
+          <div id="tarots">
+            <!-- LinkedIn card -->
+            <div class="tarot-card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="images/the_hermit.png" alt="The Hermit" />
+                </div>
+                <a
+                  href="https://www.linkedin.com/in/anita-prova-950322245/"
+                  target="_blank"
+                  class="card-back"
+                >
+                  <i class="fab fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- GitHub card -->
+            <div class="tarot-card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="images/death.png" alt="Death" />
+                </div>
+                <a
+                  href="https://github.com/anitaprova"
+                  target="_blank"
+                  class="card-back"
+                >
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Email card -->
+            <div class="tarot-card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="images/the_lovers.png" alt="The Lovers" />
+                </div>
+                <a
+                  href="mailto:ANITA.PROVA49@myhunter.cuny.edu"
+                  class="card-back"
+                >
+                  <i class="fas fa-envelope"></i>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </article>
       </div>
     </div>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 50,
+            density: { enable: true, value_area: 800 },
+          },
+          color: { value: ["#F4C1F5", "#d4b3ff", "#A947FF", "#b19cd9"] },
+          shape: { type: "circle" },
+          opacity: {
+            value: 0.8,
+            random: true,
+            anim: { enable: true, speed: 1, opacity_min: 0.3, sync: false },
+          },
+          size: {
+            value: 4,
+            random: true,
+            anim: { enable: true, speed: 2, size_min: 1, sync: false },
+          },
+          line_linked: { enable: false },
+          move: {
+            enable: true,
+            speed: 1.2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        interactivity: {
+          detect_on: "canvas",
+          events: {
+            onhover: { enable: true, mode: "bubble" },
+            onclick: { enable: true, mode: "push" },
+          },
+          modes: {
+            bubble: {
+              distance: 120,
+              size: 6,
+              duration: 2,
+              opacity: 0.8,
+              speed: 3,
+            },
+            push: { particles_nb: 3 },
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
   </body>
 
   <footer>
