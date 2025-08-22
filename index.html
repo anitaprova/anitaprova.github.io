@@ -357,20 +357,24 @@
         <script>
           $(".flipbook").turn();
         </script>
-        <!-- <article id="project">
-          <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
-          <h2 class="major">Work</h2>
-          <div id="projects-container"></div>
-        </article> -->
-
+        
         <article id="about">
           <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
           <h2 class="major">About</h2>
-          <img
-            src="images/profile picture.jpg"
-            alt="profile picture"
-            class="avatar"
-          />
+          <div class="avatar-container">
+  <img
+    src="images/profile picture.jpg"
+    alt="profile picture"
+    class="avatar"
+  />
+
+  <!-- Floating magical items -->
+  <img src="images/potion.png" class="floating-item item1" alt="potion">
+  <img src="images/book.png" class="floating-item item2" alt="book">
+  <img src="images/crystal.png" class="floating-item item3" alt="crystal">
+  <img src="images/candle.png" class="floating-item item4" alt="candle">
+</div>
+
           <p>
             Hello! I am a student at Hunter College pursing computer science. I
             have knowledge of C++, Java, JavaScript, CSS, HTML, and React. I am
@@ -380,7 +384,9 @@
           </p>
 
           <br />
-          <p style="font-size: small">Fun Fact: I'm a huge bookworm!</p>
+          <p style="font-size: small">
+            Fun Fact: I'm a huge bookworm! <span class="blinking-cursor"></span>
+          </p>
         </article>
 
         <article id="contact">

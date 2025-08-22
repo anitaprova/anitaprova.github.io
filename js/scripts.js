@@ -351,8 +351,4 @@ document.addEventListener("DOMContentLoaded", function () {
   `;
     resumeContainer.appendChild(expP);
   });
-
 });
-
-
-
