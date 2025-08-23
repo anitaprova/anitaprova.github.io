@@ -8,10 +8,16 @@
     />
     <link rel="icon" type="image/x-icon" href="/images/icon.png" />
     <link rel="stylesheet" href="css/styles.css" />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
+
+    <link rel="preconnect" href="/images/cursor.png" as="image" />
+    <link rel="preconnect" href="/images/pointer.png" as="image" />
+    <link rel="preconnect" href="/images/background.jpg" as="image" />
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Ballet:opsz@16..72&family=DotGothic16&family=MedievalSharp&family=WindSong:wght@400;500&display=swap"
       rel="stylesheet"
     />
 
@@ -19,17 +25,19 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
       rel="stylesheet"
     />
-    <!DOCTYPE html>
-
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/turn.js/4.1.0/turn.min.js"></script>
     <script src="js/scripts.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
   </head>
 
   <body>
+    <div id="particles-js"></div>
     <div id="wrapper">
       <header id="header">
         <div class="content">
@@ -64,31 +72,476 @@
       <!-- Resume -->
       <div id="content">
         <article id="resume">
-          <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
-           <h2 class="major">Resume</h2>
-          
-          <p>
-            Link for PDF Version:
-            <a href="/images/Resume.pdf" target="_blank">Resume.pdf</a>
-          </p>
-          <div id="resume-container"></div>
-        </article> 
+          <div class="resume-heading">
+            <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
+            <h2 class="major">Resume</h2>
+          </div>
 
-			<!-- Projects -->
-			<article id="project">
-				<a href="" class="cancel"><i class="fa fa-xmark"></i></a>
-				<h2 class="major">Work</h2>
-				<div id="projects-container"></div>
-			</article>
+          <div id="resume-container">
+            <!-- Resume PDF Link -->
+            <section class="resume-section">
+              <div class="moon-phase">
+                <img src="images/moon-new.png" alt="New Moon" class="glow" />
+              </div>
+              <div class="resume-text">
+                <h3>Resume PDF</h3>
+                <p>
+                  <a href="/images/Resume.pdf" target="_blank"
+                    >Download Resume.pdf</a
+                  >
+                </p>
+              </div>
+            </section>
+
+            <!-- Education -->
+            <section class="resume-section">
+              <div class="moon-phase">
+                <img src="images/moon-waxing.png" alt="Waxing Crescent" />
+              </div>
+              <div class="resume-text">
+                <h3>Education</h3>
+                <p>
+                  <b>Hunter College</b> —
+                  <i>Bachelor of Arts in Computer Science</i><br />
+                  <i>August 2022 - Dec 2025</i>
+                </p>
+              </div>
+            </section>
+
+            <!-- Skills -->
+            <section class="resume-section">
+              <div class="moon-phase">
+                <img
+                  src="images/moon-first-quarter.png"
+                  alt="Waxing Crescent"
+                />
+              </div>
+              <div class="resume-text">
+                <h2>Skills</h2>
+                <div class="skills-grid">
+                  <div class="skill">ᚠ JavaScript</div>
+                  <div class="skill">ᛉ React</div>
+                  <div class="skill">ᛃ Next.js</div>
+                  <div class="skill">ᚱ Node.js</div>
+                  <div class="skill">ᛇ Express</div>
+                  <div class="skill">ᛟ PostgreSQL</div>
+                  <div class="skill">ᚾ Supabase</div>
+                  <div class="skill">ᛊ Firebase</div>
+                  <div class="skill">ᚹ Python</div>
+                  <div class="skill">ᛏ Git</div>
+                </div>
+              </div>
+            </section>
+
+            <!-- Experience -->
+            <section class="resume-section">
+              <div class="moon-phase">
+                <img src="images/moon-full.png" alt="Crescent Moon" />
+              </div>
+              <div class="resume-text">
+                <h3>Relevant Experience</h3>
+
+                <p>
+                  <b>Software Engineer Intern</b> — <i>PwC</i><br />
+                  <i>Jun 2025 - Aug 2025</i><br />
+
+                  ➸ Created a proof of concept in Langflow that generated
+                  diagrams from code files, including a custom validation
+                  component <br />
+                  ➸ Built an AI agent in Python, designing a backend service
+                  with FastAPI and Celery for processing and database
+                  integration <br />
+                  ➸ Deployed and scaled the pipeline using Docker and
+                  Kubernetes, and presented results to senior leadership
+                </p>
+
+                <p>
+                  <b>Web Master</b> —
+                  <i>Women in Computer Science Club (WiCS)</i><br />
+                  <i>Feb 2025 - Present</i><br />
+                  ➸ Rebuilt the WiCS website using React, TypeScript, Next.js,
+                  and shadcn for improved performance and user experience <br />
+                  ➸ Designed and implemented an admin dashboard using Firebase
+                  to enable streamlined content management
+                </p>
+              </div>
+            </section>
+
+            <section class="resume-section">
+              <div class="moon-phase">
+                <img src="images/moon-third-quarter.png" alt="Crescent Moon" />
+              </div>
+              <div class="resume-text">
+                <h3>Continued Experience...</h3>
+
+                <p>
+                  <b>Fellow, Software Development</b> — <i>CUNY Tech Prep</i
+                  ><br />
+                  <i>Jul 2024 - May 2025</i><br />
+                  ➸ Selected for a competitive data science fellowship with
+                  students from across the 11 CUNY senior colleges <br />
+                  ➸ Mastered Python 3, Jupyter Notebooks, Pandas, Numpy,
+                  Scikit-learn, and SQL, and learned best practices in EDA,
+                  feature engineering, data processing, statistical modeling,
+                  data visualization, machine learning, data science process,
+                  and big data
+                </p>
+
+                <p>
+                  <b>Products and Technology Intern</b> — <i>PwC</i><br />
+                  <i>Jun 2024 - Jul 2024</i><br />
+                  ➸ Presented user experience improvements and marketing
+                  strategies for a pro bono case involving a nonprofit in
+                  education <br />
+                  ➸ Leveraged Microsoft Power BI and Excel to visualize, clean,
+                  and analyze data for PowerPoint presentations in pro bono case
+                  <br />
+                  ➸ Worked on a case study independently, analyzing key findings
+                  and presenting actionable insights
+                </p>
+              </div>
+            </section>
+
+            <section class="resume-section">
+              <div class="moon-phase">
+                <img src="images/moon-waning.png" alt="Crescent Moon" />
+              </div>
+              <div class="resume-text">
+                <h3>Supporting Experience</h3>
+                <p>
+                  <b>Customer Service</b> — <i>DigitalJetstream</i><br />
+                  <i>Auh 2022 - Present</i><br />
+                  ➸ Executed targeted email campaigns to engage a customer list
+                  of 100+ individuals, resulting in a 5% increase in open rates
+                  <br />
+                  ➸ Provided technical support and assistance to customers by
+                  enhancing website functionality through Joomla! <br />
+                  ➸ Supervised and mentored a team of interns by overseeing
+                  their activities and providing constructive feedback
+                </p>
+              </div>
+            </section>
+
+            <section class="resume-section">
+              <div class="moon-phase">
+                <img src="images/moon-new.png" alt="Crescent Moon" />
+              </div>
+              <div class="resume-text">
+                <h2>Associations</h2>
+                <div class="associations-sigils">
+                  <div class="sigil">
+                    Book Club - Treasurer, Sept 2024 - Present
+                  </div>
+                  <div class="sigil">Girls Who Code, Sep 2023 - Present</div>
+                  <div class="sigil">
+                    Computer Science Club, Sept 2024 - Present
+                  </div>
+                  <div class="sigil">
+                    Muslim Student Association (MSA), Sep 2022 - Present
+                  </div>
+                </div>
+              </div>
+            </section>
+
+          </div>
+        </article>
+
+        <!-- Projects -->
+        <article id="project">
+          <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
+          <h2 class="major">Projects</h2>
+          <div id="projects-flipbook" class="flipbook">
+            <!-- front cover -->
+            <div class="hard">
+              <p>Anita's Spell Book <small>Flip if you dare</small></p>
+            </div>
+            <div class="hard"></div>
+
+            <div class="page">
+              <h2>Diava</h2>
+              <img
+                src="images/homepage.png"
+                alt="Diava"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <div class="project-description">
+                <p>
+                  Diava aims to be the go-to platform for book lovers by
+                  integrating gamified features and social engagement tools. We
+                  want to provide a motivating way for users to track their
+                  reading progress while fostering a vibrant community. By
+                  making reading more interactive, we aim to encourage people to
+                  read consistently and engage deeply with their books.
+                </p>
+                <p>
+                  <strong>Technologies:</strong> React.js, Supabase, Hugging
+                  Face, Tailwind CSS
+                </p>
+                <p>
+                  <strong>Links:</strong>
+                  <a
+                    href="https://github.com/anitaprova/Diava"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="page">
+              <h2>Compound Compass</h2>
+              <img
+                src="images/compound_compass.jpg"
+                alt="Compound Compass"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <div class="project-description">
+                <p>
+                  Compound Compass is a web app that allows users to input a
+                  SMILES string, extract the scaffold, and perform similarity
+                  analysis to find similar compounds. It also supports voice
+                  commands to return the corresponding SMILES string.
+                </p>
+                <p>
+                  <strong>Technologies:</strong> Python, RDKit, HTML, CSS, Flask
+                </p>
+                <p>
+                  <strong>Links:</strong>
+                  <a
+                    href="https://github.com/anitaprova/jasy-gals"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="page">
+              <h2>Art Restoration</h2>
+              <img
+                src="images/art_restoration.png"
+                alt="Art Restoration"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <div class="project-description">
+                <p>
+                  We developed a machine learning model from scratch for image
+                  restoration, utilizing UNET to deblur, denoise, and brighten
+                  images, restoring them to their original quality.
+                </p>
+                <p>
+                  <strong>Technologies:</strong> Python, Tensorflow, Streamlit,
+                  NumPy, Pandas
+                </p>
+                <p>
+                  <strong>Links:</strong>
+                  <a
+                    href="https://github.com/anitaprova/CTP-Project"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                  |
+                  <a
+                    href="https://artrestoration.streamlit.app/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Website</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="page">
+              <h2>HawkHelper</h2>
+              <img
+                src="images/hawkhelper.gif"
+                alt="HawkHelper"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <div class="project-description">
+                <p>
+                  We created a chatbot made for and by Hunter students. It gives
+                  students in-depth accurate information on mental health, food
+                  assistance, housing initiatives, and more quickly,
+                  efficiently, and accurately. By simply asking the chatbot any
+                  question regarding resources, students can receive answers
+                  almost instantaneously without the extra clicks and tabs.
+                </p>
+                <p>
+                  <strong>Technologies:</strong> React.js, Express.js, Python,
+                  Gemini API, HTML, CSS
+                </p>
+                <p>
+                  <strong>Links:</strong>
+                  <a
+                    href="https://github.com/zaraamerr/cuny-resource-chatbot"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                  |
+                  <a
+                    href="https://devpost.com/software/hawkhelper"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Devpost</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- NYC Culture Map (PAGE) -->
+            <div class="page">
+              <h2>NYC Culture Map</h2>
+              <img
+                src="images/map.gif"
+                alt="NYC Culture Map"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <div class="project-description">
+                <p>
+                  This project was a collaborative effort with a team of four
+                  members for the CUNY hackathon. Over the course of three days,
+                  we employed technologies such as HTML, CSS, React, JS,
+                  LeafLet, and Google OAuth. The web app aims to provide an
+                  immersive exploration of New York City's diverse
+                  neighborhoods, highlighting their cultural richness and
+                  heritage. I utilized React and Leaflet to create an
+                  interactive map experience for users.
+                </p>
+                <p>
+                  <strong>Technologies:</strong> HTML, CSS, React, JS, LeafLet,
+                  Google OAuth
+                </p>
+                <p>
+                  <strong>Links:</strong>
+                  <a
+                    href="https://devpost.com/software/nyc-explorer"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Devpost</a
+                  >
+                  |
+                  <a
+                    href="https://github.com/Aaleia/UrbanTapestry"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- Joystick Junction (PAGE) -->
+            <div class="page">
+              <h2>Joystick Junction</h2>
+              <!-- If the file really has a space, consider renaming or encode as %20 -->
+              <img
+                src="images/joystick%20junction.gif"
+                alt="Joystick Junction"
+                style="max-width: 100%; margin-bottom: 10px"
+              />
+              <div class="project-description">
+                <p>
+                  Over the course of 10 weeks, as part of my final project for
+                  the Intermediate Web Development Course at Codepath, I
+                  designed and developed a website using React where users can
+                  discuss their favorite video games. The website includes
+                  features such as user posts, where users can create, edit, and
+                  delete their posts, a commenting system allowing users to
+                  comment on posts made by others, and filtering options to sort
+                  posts by most popular and by time.
+                </p>
+                <p><strong>Technologies:</strong> React</p>
+                <p>
+                  <strong>Links:</strong>
+                  <a
+                    href="https://github.com/anitaprova/codepath-finalproject"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <div class="page">
+              <h2>Book Search</h2>
+              <div class="project-description">
+                <p>
+                  This project was a collaborative effort with a team of three
+                  members over the course of one month. We employed technologies
+                  such as SvelteKit, Google Firebase, Google Firestore, Vite,
+                  HTML, CSS, and JavaScript. The application utilized Google
+                  Books APIs to facilitate search functionalities. I led the
+                  implementation of front-end components using SvelteKit and
+                  styled the application with CSS. The project was showcased at
+                  Codefest 2024 and was a part of a Google mentorship program,
+                  where we received guidance from industry experts to improve
+                  our technical skills and project management abilities.
+                </p>
+                <p>
+                  <strong>Technologies:</strong> SvelteKit, Google Firebase,
+                  Google Firestore, Vite, HTML, CSS, JavaScript
+                </p>
+                <p>
+                  <strong>Links:</strong>
+                  <a
+                    href="https://github.com/Justinw21/dabooks"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >GitHub</a
+                  >
+                </p>
+              </div>
+            </div>
+
+            <!-- back cover -->
+            <div class="hard">
+              Thanks for reading <small>© Anita Prova</small>
+            </div>
+          </div>
+        </article>
+
+        <script src="/js/scripts.js"></script>
+        <script src="jquery.js"></script>
+        <script src="turn.js"></script>
+        <script>
+          $(".flipbook").turn();
+        </script>
 
         <article id="about">
           <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
           <h2 class="major">About</h2>
-          <img
-            src="images/profile picture.jpg"
-            alt="profile picture"
-            class="avatar"
-          />
+          <div class="avatar-container">
+            <img
+              src="images/profile picture.jpg"
+              alt="profile picture"
+              class="avatar"
+            />
+
+            <!-- Floating magical items -->
+            <img
+              src="images/potion.png"
+              class="floating-item item1"
+              alt="potion"
+            />
+            <img src="images/book.png" class="floating-item item2" alt="book" />
+            <img
+              src="images/crystal.png"
+              class="floating-item item3"
+              alt="crystal"
+            />
+            <img
+              src="images/candle.png"
+              class="floating-item item4"
+              alt="candle"
+            />
+          </div>
+
           <p>
             Hello! I am a student at Hunter College pursing computer science. I
             have knowledge of C++, Java, JavaScript, CSS, HTML, and React. I am
@@ -98,33 +551,103 @@
           </p>
 
           <br />
-          <p style="font-size: small">Fun Fact: I'm a huge bookworm!</p>
+          <p style="font-size: small">
+            Fun Fact: I'm a huge bookworm! <span class="blinking-cursor"></span>
+          </p>
         </article>
 
         <article id="contact">
           <a href="" class="cancel"><i class="fa fa-xmark"></i></a>
           <h2 class="major">Contact</h2>
-          <p>Want to reach out? Here are my platforms below!</p>
-          <ul class="icons">
-            <li>
-              <a href="https://www.linkedin.com/in/anita-prova-950322245/"
-                ><i class="fab fa-linkedin"></i
-              ></a>
-            </li>
-            <li>
-              <a href="https://github.com/anitaprova"
-                ><i class="fab fa-github"></i
-              ></a>
-            </li>
-            <li>
-              <a href="mailto:ANITA.PROVA49@myhunter.cuny.edu"
-                ><i class="fas fa-envelope"></i
-              ></a>
-            </li>
-          </ul>
+          <p>Want to reach out? Flip the cards below</p>
+          <div id="tarots">
+            <!-- LinkedIn card -->
+            <div class="tarot-card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="images/the_hermit.png" alt="The Hermit" />
+                </div>
+                <a
+                  href="https://www.linkedin.com/in/anita-prova-950322245/"
+                  target="_blank"
+                  class="card-back"
+                >
+                  <i class="fab fa-linkedin"></i>
+                  <span>LinkedIn</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- GitHub card -->
+            <div class="tarot-card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="images/death.png" alt="Death" />
+                </div>
+                <a
+                  href="https://github.com/anitaprova"
+                  target="_blank"
+                  class="card-back"
+                >
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+              </div>
+            </div>
+
+            <!-- Email card -->
+            <div class="tarot-card">
+              <div class="card-inner">
+                <div class="card-front">
+                  <img src="images/the_lovers.png" alt="The Lovers" />
+                </div>
+                <a
+                  href="mailto:ANITA.PROVA49@myhunter.cuny.edu"
+                  class="card-back"
+                >
+                  <i class="fas fa-envelope"></i>
+                  <span>Email</span>
+                </a>
+              </div>
+            </div>
+          </div>
         </article>
       </div>
     </div>
+
+    <script>
+      particlesJS("particles-js", {
+        particles: {
+          number: {
+            value: 50,
+            density: { enable: true, value_area: 800 },
+          },
+          color: { value: ["#F4C1F5", "#d4b3ff", "#A947FF", "#b19cd9"] },
+          shape: { type: "circle" },
+          opacity: {
+            value: 0.8,
+            random: true,
+            anim: { enable: true, speed: 1, opacity_min: 0.3, sync: false },
+          },
+          size: {
+            value: 4,
+            random: true,
+            anim: { enable: true, speed: 2, size_min: 1, sync: false },
+          },
+          line_linked: { enable: false },
+          move: {
+            enable: true,
+            speed: 1.2,
+            direction: "none",
+            random: true,
+            straight: false,
+            out_mode: "out",
+            bounce: false,
+          },
+        },
+        retina_detect: true,
+      });
+    </script>
   </body>
 
   <footer>
