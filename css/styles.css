@@ -254,6 +254,70 @@ html {
   transition: transform 1s ease, opacity 1s ease;
 }
 
+.resume-text p {
+  background: rgba(30, 20, 50, 0.6); 
+  padding: 1rem;
+  border-radius: 12px;
+  border: 2px solid rgba(220, 200, 255, 0.6);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.2rem;
+  margin-top: 1.5rem;
+}
+
+.skill {
+  font-size: 1.1rem;
+  letter-spacing: 2px;
+  color: #e0d9ff;
+  background: rgba(30, 20, 50, 0.6);
+  border: 2px solid rgba(220, 200, 255, 0.6);
+  padding: 1rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.skill:hover {
+  transform: scale(1.1) rotate(-2deg);
+  box-shadow: 0 0 15px rgba(200, 150, 255, 0.8);
+  border-color: rgba(230, 200, 255, 0.8);
+}
+
+.associations-sigils {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+  justify-content: center;
+}
+
+.sigil {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 2px solid rgba(220, 200, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  color: #e8dcff;
+  background: radial-gradient(circle at center, rgba(40, 20, 70, 0.8), rgba(20, 10, 40, 0.9));
+  text-align: center;
+  box-shadow: 0 0 10px rgba(180, 130, 255, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  padding: 2%;
+}
+
+.sigil:hover {
+  transform: scale(1.15) rotate(6deg);
+  box-shadow: 0 0 20px rgba(220, 180, 255, 0.9);
+  border-color: rgba(250, 220, 255, 0.9);
+}
+
 #project {
   display: none;
   visibility: hidden;
